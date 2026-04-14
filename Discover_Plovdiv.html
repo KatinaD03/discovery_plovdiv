@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Plovdiv</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+      body {
+        background-color: #f7faff;
+      }
+
+      /* NAVBAR CUSTOM COLORS */
+      .navbar-custom {
+        background-color: #2F4156 !important;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #ffffff !important;
+        font-weight: 600;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: #C8D9E6 !important;
+      }
+
+      /* Mobile menu icon */
+      .navbar-custom .navbar-toggler {
+        border-color: #ffffff;
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+      }
+
+      /* HERO CUSTOM COLORS */
+      .hero-custom {
+        background-color: #567C8D !important;
+        color: #ffffff !important;
+      }
+
+      .hero-custom h1,
+      .hero-custom p {
+        color: #ffffff !important;
+      }
+
+      /* HERO BUTTON */
+      .btn-hero {
+        background-color: #C8D9E6 !important;
+        color: #2F4156 !important;
+        border: none;
+        font-weight: 600;
+      }
+
+      .btn-hero:hover {
+        background-color: #F5EFEB !important;
+        color: #2F4156 !important;
+      }
+
+      /* GRID CUSTOM COLORS */
+      .grid-light {
+        background-color: #F5EFEB !important;
+        color: #2F4156 !important;
+      }
+
+      .grid-dark {
+        background-color: #567C8D !important;
+        color: #F5EFEB !important;
+      }
+      
+      /* CARDS SECTION BACKGROUND */
+      #cards {
+        background-color: #F7FAFF !important;
+      }
+
+      /* CARD BACKGROUND */
+      .card {
+        background-color: #F5EFEB !important;
+        border: none;
+        color: #2F4156;
+      }
+
+      /* CARD TITLES */
+      .card-title {
+        color: #2F4156;
+        font-weight: 600;
+      }
+
+      /* CUSTOM BUTTONS FOR CARDS */
+      .btn-card {
+        background-color: #C8D9E6 !important;
+        color: #2F4156 !important;
+        border: none !important;
+        font-weight: 600;
+      }
+
+      .btn-card:hover {
+        background-color: #FFFFFF !important;
+        color: #2F4156 !important;
+        border: none !important;
+      }
+
+      .card-img-top {
+        height: 300px; /* можеш да го промениш на 220, 250, 300 */
+        object-fit: cover;
+        width: 100%;
+      }
+
+      /* FORM BUTTON CUSTOM COLORS */
+      .btn-form {
+        background-color: #C8D9E6 !important;
+        color: #2F4156 !important;
+        border: none !important;
+        font-weight: 600;
+      }
+
+      .btn-form:hover {
+        background-color: #F5EFEB !important;
+        color: #2F4156 !important;
+      }
+
+      .badge-large {
+          font-size: 1rem;       
+          padding: 8px 14px;     
+          border-radius: 10px;   
+      }
+
+      .progress-bar {
+          background-color: #C8D9E6 !important;
+          color: #2F4156 !important;
+          font-weight: 600;
+      }
+
+      .carousel-item img {
+          height: 350px;      
+          object-fit: cover;  
+          width: 100%;
+      }
+
+      /* MODAL BUTTON CUSTOM COLORS */
+      .btn-modal {
+          background-color: #C8D9E6 !important;
+          color: #2F4156 !important;
+          border: none !important;
+          font-weight: 600;
+      }
+
+      .btn-modal:hover {
+          background-color: #F5EFEB !important;
+          color: #2F4156 !important;
+      }
+
+      /* MODAL CLOSE BUTTON CUSTOM COLORS */
+      .btn-modal-close {
+          background-color: #C8D9E6 !important;
+          color: #2F4156 !important;
+          border: none !important;
+          font-weight: 600;
+      }
+
+      .btn-modal-close:hover {
+          background-color: #F5EFEB !important;
+          color: #2F4156 !important;
+      }
+
+      .footer-custom {
+          background-color: #2F4156 !important;
+          color: #F5EFEB !important;
+      }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-geo-alt-fill"></i> Discover Plovdiv</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#grid">За Пловдив</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cards">Забележителности</a></li>
+        <li class="nav-item"><a class="nav-link" href="#forms">Свържи се</a></li>
+        <li class="nav-item"><a class="nav-link" href="#components">Още</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero-custom text-center py-5">
+  <div class="container">
+    <h1 class="display-4">Открий магията на Пловдив</h1>
+    <p class="lead">Един от най-старите живи градове в света</p>
+    <a href="#cards" class="btn btn-hero btn-lg">
+      <i class="bi bi-arrow-down-circle"></i> Разгледай
+    </a>
+  </div>
+</header>
+
+
+<!-- GRID SECTION -->
+<section id="grid" class="py-5">
+  <div class="container">
+    <h2 class="mb-4"><i class="bi bi-info-circle-fill"></i> За Пловдив</h2>
+
+    <div class="row">
+
+      <!-- ЛЯВА КОЛОНА -->
+      <div class="col-md-4 p-3 border grid-light">
+        <h5><i class="bi bi-clock-history"></i> История</h5>
+        Пловдив е един от най-старите постоянно населени градове в света – с над 8000 години история. 
+        През вековете е бил тракийски център, римски метрополис, важен византийски и османски град. 
+        Днес неговите археологически пластове разкриват уникална смесица от култури и цивилизации.
+      </div>
+
+      <!-- СРЕДНА КОЛОНА -->
+      <div class="col-md-4 p-3 border grid-dark">
+        <h5><i class="bi bi-map"></i> Разположение</h5>
+        Пловдив е разположен върху седем емблематични тепета, които оформят характерния му силует. 
+        Градът се намира в сърцето на Горнотракийската низина, което го прави естествен кръстопът между 
+        Западна Европа, Балканите и Близкия изток. Панорамните гледки от тепетата са сред най‑красивите в България.
+      </div>
+
+      <!-- ДЯСНА КОЛОНА -->
+      <div class="col-md-4 p-3 border grid-light">
+        <h5><i class="bi bi-people-fill"></i> Култура</h5>
+        Пловдив е Европейска столица на културата 2019 и дом на богата художествена сцена. 
+        Старият град, квартал „Капана“, музеите, галериите и фестивалите превръщат града в център на творчество, 
+        музика, театър и съвременно изкуство. Атмосферата му съчетава древност и модерност по уникален начин.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CARDS -->
+<section id="cards" class="py-5">
+  <div class="container">
+    <h2 class="mb-4"><i class="bi bi-camera-fill"></i> Топ забележителности</h2>
+
+    <div class="row g-4">
+
+      <!-- Карта 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="antic_theatre.jpg" class="card-img-top" alt="Античен театър">
+          <div class="card-body">
+            <h5 class="card-title">Античният театър</h5>
+            <p class="card-text">Една от най-добре запазените антични сцени в света.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-eye"></i> Виж повече</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="the_old_town.jpg" class="card-img-top" alt="Старият град">
+          <div class="card-body">
+            <h5 class="card-title">Старият град</h5>
+            <p class="card-text">Калдъръмени улици, възрожденски къщи и невероятна атмосфера.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-geo"></i> Детайли</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="kapana.jpg" class="card-img-top" alt="Капана">
+          <div class="card-body">
+            <h5 class="card-title">Капана</h5>
+            <p class="card-text">Арт кварталът на Пловдив – галерии, кафенета и творчество.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-heart"></i> Още</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 4 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="roman_stadium.jpg" class="card-img-top" alt="Римският стадион">
+          <div class="card-body">
+            <h5 class="card-title">Римският стадион</h5>
+            <p class="card-text">Разположен под главната улица, впечатлява с мащаб и история.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-geo-alt"></i> Локация</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 5 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="nebet_tepe.jpg" class="card-img-top" alt="Небет тепе">
+          <div class="card-body">
+            <h5 class="card-title">Небет тепе</h5>
+            <p class="card-text">Едно от тепетата с панорамна гледка към целия град.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-binoculars"></i> Гледка</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 6 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="the_main_street.jpg" class="card-img-top" alt="Главната улица">
+          <div class="card-body">
+            <h5 class="card-title">Главната улица</h5>
+            <p class="card-text">Една от най-дългите пешеходни улици в Европа, пълна с живот.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-shop"></i> Разходка</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 7 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="ethnographig_museum.jpg" class="card-img-top" alt="Етнографски музей">
+          <div class="card-body">
+            <h5 class="card-title">Етнографски музей</h5>
+            <p class="card-text">Разположен в Куюмджиевата къща – шедьовър на възрожденската архитектура.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-house"></i> Разгледай</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 8 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="youth_hill.jpg" class="card-img-top" alt="Младежки хълм">
+          <div class="card-body">
+            <h5 class="card-title">Младежки хълм</h5>
+            <p class="card-text">Едно от най-зелените места в Пловдив, любимо за разходки и спорт.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-tree"></i> Още</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карта 9 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="aviation_museum.jpg" class="card-img-top" alt="Музей на авиацията">
+          <div class="card-body">
+            <h5 class="card-title">Музей на авиацията</h5>
+            <p class="card-text">Уникална колекция от самолети и авиационна техника близо до Пловдив.</p>
+            <a href="#" class="btn btn-card"><i class="bi bi-airplane"></i> Научи повече</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FORMS -->
+<section id="forms" class="py-5">
+  <div class="container">
+    <h2 class="mb-4"><i class="bi bi-envelope-fill"></i> Свържи се с нас</h2>
+
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Име</label>
+        <input type="text" class="form-control" placeholder="Въведи име">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Имейл</label>
+        <input type="email" class="form-control" placeholder="example@mail.com">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Съобщение</label>
+        <textarea class="form-control" rows="3" placeholder="Напиши съобщение"></textarea>
+      </div>
+
+      <button class="btn btn-form"><i class="bi bi-send"></i> Изпрати</button>
+    </form>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section id="components" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4"><i class="bi bi-stars"></i> Още функционалности</h2>
+
+    <!-- ALERT -->
+    <div class="alert alert-info"><i class="bi bi-info-circle-fill"></i> Пловдив е Европейска столица на културата 2019</div>
+
+    <!-- BADGE -->
+    <span class="badge bg-success badge-large">
+        <i class="bi bi-award-fill"></i> Препоръчано място
+    </span>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress my-3">
+      <div class="progress-bar" style="width: 80%;">80% разгледани забележителности</div>
+    </div>
+
+
+    <!-- CAROUSEL -->
+    <div id="carouselExample" class="carousel slide w-50 mx-auto mb-4">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="plovdiv2.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="plovdiv1.jpg" class="d-block w-100">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- MODAL BUTTON -->
+    <button class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#demoModal">
+      <i class="bi bi-info-circle"></i> Информация за града
+    </button>
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="demoModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-building"></i> Пловдив – кратка информация</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            Пловдив е вторият по големина град в България и един от най-старите в света.  
+            Известен е със своята култура, архитектура и уникална атмосфера.
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-modal-close" data-bs-dismiss="modal">Затвори</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-custom text-center py-3">
+  Discover Plovdiv © 2026
+</footer>
+
+
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
